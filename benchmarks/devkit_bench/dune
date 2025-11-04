@@ -1,0 +1,42 @@
+; Devkit GC Benchmark library containing all benchmark modules
+(library
+  (name gc_bench_lib)
+  (libraries devkit extlib unix)
+  (modules htmlStream_bench stre_bench network_bench gzip_bench))
+
+; Individual benchmark executables
+(executable
+  (name htmlStream_bench_exe)
+  (modules htmlStream_bench_exe)
+  (libraries gc_bench_lib))
+
+(executable
+  (name stre_bench_exe)
+  (modules stre_bench_exe)
+  (libraries gc_bench_lib))
+
+(executable
+  (name network_bench_exe)
+  (modules network_bench_exe)
+  (libraries gc_bench_lib))
+
+(executable
+  (name gzip_bench_exe)
+  (modules gzip_bench_exe)
+  (libraries gc_bench_lib))
+
+; Main benchmark runner
+(executable
+  (name gc_bench_main)
+  (modules gc_bench_main)
+  (libraries gc_bench_lib devkit extlib))
+
+; Add benchmarks to buildbench alias for sandmark
+(alias
+  (name buildbench)
+  (deps
+    htmlStream_bench_exe.exe
+    stre_bench_exe.exe
+    network_bench_exe.exe
+    gzip_bench_exe.exe
+    gc_bench_main.exe))
