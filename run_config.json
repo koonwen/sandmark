@@ -1561,7 +1561,7 @@
       ]
     },
     {
-      "executable": "benchmarks/devkit_bench/htmlStream_bench_exe.exe",
+      "executable": "benchmarks/ahrefs-devkit/htmlStream_bench_exe.exe",
       "name": "devkit_htmlstream_bench",
       "tags": [
         "10s_100s",
@@ -1574,7 +1574,7 @@
       ]
     },
     {
-      "executable": "benchmarks/devkit_bench/stre_bench_exe.exe",
+      "executable": "benchmarks/ahrefs-devkit/stre_bench_exe.exe",
       "name": "devkit_stre_bench",
       "tags": [
         "10s_100s",
@@ -1587,7 +1587,7 @@
       ]
     },
     {
-      "executable": "benchmarks/devkit_bench/network_bench_exe.exe",
+      "executable": "benchmarks/ahrefs-devkit/network_bench_exe.exe",
       "name": "devkit_network_bench",
       "tags": [
         "10s_100s",
@@ -1600,7 +1600,7 @@
       ]
     },
     {
-      "executable": "benchmarks/devkit_bench/gzip_bench_exe.exe",
+      "executable": "benchmarks/ahrefs-devkit/gzip_bench_exe.exe",
       "name": "devkit_gzip_bench",
       "tags": [
         "10s_100s",
